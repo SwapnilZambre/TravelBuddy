@@ -1,0 +1,21 @@
+export const PUNE_AREAS: string[] = [
+    'Kharadi', 'Alandi', 'Viman Nagar', 'Koregaon Park', 'Kalyani Nagar',
+    'Hadapsar', 'Magarpatta', 'Shivaji Nagar', 'Deccan Gymkhana', 'Baner',
+    'Aundh', 'Kothrud', 'Sinhagad Road', 'Bibwewadi', 'Kondhwa', 'Wakad',
+    'Pimpri', 'Chinchwad', 'Camp', 'Dighi', 'Moshi', 'Pune Station',
+    'Pashan', 'Balewadi', 'Hinjewadi', 'Yerwada', 'Swargate', 'Warje',
+    'Katraj', 'Dhanori', 'Vishrantwadi', 'Bhosari', 'Lohegaon', 'NIBM Road',
+    'Mundhwa', 'Wanowrie', 'Fatima Nagar', 'Sus', 'Bavdhan', 'Ravet',
+    'Shaniwar Wada', 'Aga Khan Palace', 'Osho Ashram', 'Raja Dinkar Kelkar Museum',
+    'Sinhagad Fort', 'Pune University', 'Phoenix Marketcity', 'Amanora Mall',
+    'Dagdusheth Halwai Ganpati Temple', 'Parvati Hill', 'Saras Baug', 'Bund Garden',
+    'Empress Garden', 'National Defence Academy', 'Khadakwasla Dam', 'Pashan Lake',
+    'Chaturshringi Temple', 'Pataleshwar Cave Temple', 'Lal Mahal', 'Shanipar',
+    'JM Road', 'FC Road', 'MG Road', 'Nagar Road', 'Solapur Road',
+    'Mumbai-Pune Expressway', 'Old Mumbai-Pune Highway', 'Airport Road',
+    'Karve Road', 'Satara Road', 'Paud Road', 'Senapati Bapat Road',
+    'Laxmi Road', 'Tilak Road', 'University Road',
+    'Pune Cantonment', 'Khadki Cantonment', 'Dehu Road Cantonment',
+    'Pimpri-Chinchwad Industrial Area', 'MIDC Bhosari', 'IT Park Hinjewadi',
+    'Magarpatta Cybercity', 'EON Free Zone'
+];

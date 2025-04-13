@@ -1,0 +1,36 @@
+th.sortable {
+    cursor: pointer;
+    user-select: none;
+  }
+  .responsive-table-container {
+    overflow-x: auto;
+    width: 100%;
+  }
+  .material-icons {
+    font-size: 20px;
+  }
+  
+  .material-icons:hover {
+    font-size: 24px; 
+  }
+  .matNoDataRow{
+    font-size: 30px;
+    font-weight: 500;
+    height: 50vh;
+  }
+  tr {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  tr:hover {
+    transform: translateY(-3px); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    background-color: #f9f9f9; 
+    cursor: pointer; 
+  }
+  @media (max-width: 768px) {
+    .responsive-table-container {
+      overflow-x: auto;
+      width: 100%;
+    } 
+  }

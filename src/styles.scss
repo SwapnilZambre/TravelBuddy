@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.snackbar-success { 
+    background-color: #4caf50 !important; /* Green */
+    color: white !important;
+    font-weight: 500;
+  }
+  
+  .snackbar-error {
+    background-color: #f44336 !important; /* Red */
+    color: white !important;
+    font-weight: 500;
+  }
+  input:focus, select:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: #ced4da !important;
+  }
+  
+  .modal-header{
+    background-color: rgba(0, 115, 255, 0.616);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  button{
+    cursor: pointer;
+  }

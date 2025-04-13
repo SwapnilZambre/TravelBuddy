@@ -1,0 +1,93 @@
+<div class="modal show d-block" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <!-- Header -->
+      <div class="modal-header">
+        <h5 class="modal-title">Confirmation</h5>
+        <button
+          type="button d-flex justify-content-end"
+          class="close btn"
+          aria-label="Close"
+          (click)="onCancel()"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <form [formGroup]="verifyForm">
+        <div class="modal-body d-flex justify-content-center">
+          <div class="full-width">
+            <p>Please enter the details before confirmation.</p>
+
+            <div class="form-group mb-2">
+              <label>Enter Name</label>
+              <input
+                class="form-control"
+                placeholder="Enter your name"
+                formControlName="userName"
+              />
+            </div>
+
+            <div class="form-group mb-2">
+              <label>Enter Email Address</label>
+              <input
+                class="form-control"
+                placeholder="Enter your email address for verify"
+                formControlName="email"
+              />
+
+              @if (!isOtpSent) {
+                <button
+                  type="button"
+                  [disabled]="!verifyForm.get('email')?.value"
+                  class="btn btn-primary mt-1"
+                  (click)="sendOtp()"
+                >
+                  Send OTP
+                </button>
+              } @else {
+                <button
+                  type="button"
+                  [disabled]="!verifyForm.get('email')?.value"
+                  class="btn btn-warning mt-1"
+                  (click)="resendOtp()"
+                >
+                  Resend OTP
+                </button>
+              }
+            </div>
+
+            @if (isOtpSent) {
+              <div class="form-group mb-2">
+                <label>Enter OTP</label>
+                <input
+                  class="form-control"
+                  placeholder="Enter OTP"
+                  formControlName="otp"
+                />
+                <button
+                  type="button"
+                  [disabled]="!verifyForm.get('otp')?.value"
+                  class="btn btn-success mt-1"
+                  (click)="onVerify()"
+                >
+                  Verify
+                </button>
+              </div>
+            }
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="modal-footer d-flex justify-content-center">
+          <button type="button" class="btn btn-secondary" (click)="onCancel()">
+            No
+          </button>
+          <button  type="submit" class="btn btn-primary" [disabled]="!isOtpVerified" (click)="onAccept()">
+            Accept
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

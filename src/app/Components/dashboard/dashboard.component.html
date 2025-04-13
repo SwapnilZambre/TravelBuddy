@@ -1,0 +1,46 @@
+<div class="maindiv">
+<div class="header">
+  <app-header></app-header>
+</div>
+<section>
+  <div class="createBtn mt-2 p-1">
+    <button
+    type="button"
+    class="btn btn-outline-primary me-2 createBtn"
+    (click)="CreateTrp()"
+  >
+  <mat-icon>add</mat-icon>  Create A Trip
+  </button>
+  </div>
+  <div class="input-group d-flex">
+    <input
+      #fromInput
+      type="text"
+      class="form-control ms-1 me-2"
+      placeholder="Travelling from.."
+    />
+    <input
+      #toInput
+      type="text"
+      class="form-control me-2"
+      placeholder="Travelling to.."
+    />
+    <button
+      type="button"
+      class="btn btn-outline-primary me-2"
+      (click)="applyFilters(fromInput.value, toInput.value)"
+    >
+      Search
+    </button>
+    <button
+    type="button"
+    class="btn btn-outline-danger me-2"
+    (click)="clearFilters(fromInput, toInput)"
+  >
+    Clear
+  </button>
+  </div>
+  <app-userlist [fromFilter]="travellingFrom"
+  [toFilter]="travellingTo" [userAdded]="userAdded"></app-userlist>
+</section>
+</div>

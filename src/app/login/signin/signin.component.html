@@ -1,0 +1,50 @@
+
+    <!-- Login form -->
+     <div class="main">
+        <form [formGroup]="loginForm">
+            <!-- Left section of the form -->
+            <div class="left">
+              <div>
+                <!-- Welcome message and registration link -->
+                <p class="travelbuddy">Welcome to TRAVEL BUDDY!</p>
+                <a href="#">Don't have an account? </a>
+                <input type="submit" name="" id="" value="Signup" (click)="Register()"/>
+              </div>
+            </div>
+      
+            <!-- Right section of the form -->
+            <div class="right">
+              <div>
+                <!-- Login heading -->
+                <h1>Login</h1>
+      
+                <!-- Username input field -->
+                <input type="text" name="Username" id="" placeholder="Username" formControlName="userName"/>
+                <span class="material-symbols-outlined person"> person </span>
+      
+                <!-- Password input field -->
+                <input type="password" name="Password" id="" placeholder="Password" formControlName="password"/>
+                <span class="material-symbols-outlined lock"> lock </span>
+      
+                <!-- Forgot password link -->
+
+                <a href="/resetpass" >Forgot Password?</a>
+                <!-- <button class="resetpass" (click)="resetPass()"></button> -->
+      
+                <!-- Login button -->
+                <button type="button" (click)="logIn()">Signin</button>
+      
+                <!-- Social login options -->
+                <!-- <p>or login with social platforms</p>
+                <div class="social-accounts">
+                  <a href=""><i class="fa-brands fa-google fa-align-center"></i> </a>
+                  <a href=""><i class="fa-brands fa-facebook-f fa-align-center"></i></a>
+                  <a href=""><i class="fa-brands fa-github fa-align-center"></i></a>
+                  <a href=""><i class="fa-brands fa-linkedin-in fa-align-center"></i></a>
+                </div> -->
+              </div>
+            </div>
+          </form>
+     </div>
+  
+  

@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">TravelBuddy✈️</a>
+
+    <!-- 🔔 Notification Icon (always visible on both small and large screens) -->
+    <button
+      mat-icon-button
+      matBadge="3"
+      matBadgeColor="warn"
+      matBadgeOverlap="false"
+      class="btn bg-transparent border-0 d-flex align-items-center me-2 ms-auto"
+      type="button"
+    >
+      <mat-icon>notifications</mat-icon>
+    </button>
+
+    <!-- 🍔 Burger Icon -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- 🔻 Nav Collapse -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- 👇 Logout Button (showing on large screens, with 10px gap) -->
+        <li class="nav-item d-none d-lg-block">
+          <button class="btn btn-outline-success me-2" (click)="logout()">
+            <mat-icon>logout</mat-icon>
+            Logout
+          </button>
+        </li>
+
+        <!-- 👇 Logout as list item on small screen (inside burger menu, with 10px gap) -->
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link" (click)="logout()" href="#">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

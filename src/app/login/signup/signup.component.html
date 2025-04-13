@@ -1,0 +1,55 @@
+<!-- Login form -->
+<div class="main">
+  <form [formGroup]="signupForm">
+    <!-- Left section of the form -->
+    <div class="left">
+      <div>
+        <!-- Welcome message and registration link -->
+        <p class="travelbuddy">Welcome to TRAVEL BUDDY!</p>
+      </div>
+    </div>
+
+    <!-- Right section of the form -->
+    <div class="right">
+        <h1 class="text-center">Signup</h1>
+      <div>
+        <!-- Login heading -->
+        <div class="userdiv">
+            <input type="text" placeholder="Username" formControlName="userName" />
+            <span class="material-symbols-outlined person">person</span>
+        </div>
+        <div class="passdiv">
+            <input
+            type="password"
+            placeholder="Password"
+            formControlName="password"
+          />
+          <span class="material-symbols-outlined lock">lock</span>
+  
+        </div>
+        <div class="selectdiv">
+              <!-- New Role Dropdown -->
+        <div class="input-wrapper">
+            <select formControlName="role" (change)="onRoleChange($event)">
+              <option value="">Select Role</option>
+              @for (role of userRoles; track $index) {
+              <option [value]="role.roleName">
+                {{ role.roleName }}
+              </option>
+              }
+            </select>
+            <!-- Forgot password link -->
+          </div>
+        </div>
+        
+       
+      <div class="btndiv">
+        <button type="button" (click)="signup()">Signup</button>
+
+      </div>
+
+        <!-- Login button -->
+      </div>
+    </div>
+  </form>
+</div>

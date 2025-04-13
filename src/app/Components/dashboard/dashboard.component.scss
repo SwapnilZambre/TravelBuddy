@@ -1,0 +1,22 @@
+.maindiv {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+.createBtn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: end !important;
+}
+section {
+  margin: 5px;
+  padding: 5px;
+}
+
+@media (max-width: 768px) {
+  .input-group input {
+    font-size: 13px;
+  }
+}
